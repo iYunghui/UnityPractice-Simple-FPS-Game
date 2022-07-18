@@ -6,6 +6,9 @@ public class EnemyGenerator : MonoBehaviour
 {
     [SerializeField]
     private GameObject enemy;
+    [SerializeField]
+    private MainCube main;
+
     private int counter = 0;
 
     // Start is called before the first frame update
@@ -17,10 +20,13 @@ public class EnemyGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(counter >= Random.Range(200, 1000)) {
-            Instantiate(enemy, new Vector3(Random.Range(-4.0f, 4.0f), 0.5f, 4), Quaternion.identity);
-            counter = 0;
+        if(main.startGame) {
+            if(counter >= Random.Range(200, 1000)) {
+                Instantiate(enemy, new Vector3(Random.Range(-4.0f, 4.0f), 0.5f, 4), Quaternion.identity);
+                counter = 0;
+            }
+            counter += 1;
         }
-        counter += 1;
+        
     }
 }

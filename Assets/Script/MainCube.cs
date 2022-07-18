@@ -7,6 +7,8 @@ public class MainCube : MonoBehaviour
     private Transform mainCube;
     [SerializeField] private GameObject bullet;
 
+    public bool startGame = false;
+
     // Start is called before the first frame update
     void Start()
     {
