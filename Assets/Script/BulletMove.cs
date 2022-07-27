@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class BulletMove : MonoBehaviour
 {
-    [SerializeField]
-    private Rigidbody bulletRigibcody;
+    [SerializeField] private Rigidbody bulletRigibcody;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -25,6 +23,8 @@ public class BulletMove : MonoBehaviour
             Destroy(gameObject);
             Destroy(collision.gameObject);
             Debug.Log("kill");
+
+            SoundManager.soundManager.playSound(0);
         }
         
     }
