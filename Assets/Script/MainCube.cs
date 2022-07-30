@@ -6,6 +6,7 @@ public class MainCube : MonoBehaviour
 {
     private Transform mainCube;
     [SerializeField] private GameObject bullet;
+    [SerializeField] private GameObject collisionEffect;
 
     public bool startGame = false;
 
@@ -34,6 +35,7 @@ public class MainCube : MonoBehaviour
     private void OnTriggerEnter(Collider collider) {
         if(collider.gameObject.tag == "Enemy") {
             Debug.Log("QQ");
+            Instantiate(collisionEffect, collider.transform.position, Quaternion.identity);
         }
     }
 }

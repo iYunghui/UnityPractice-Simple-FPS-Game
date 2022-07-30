@@ -594,6 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6927244073812134498, guid: 7ba2654c603a00941bf620a38c34e390, type: 3}
+  collisionEffect: {fileID: 3418297641272175566, guid: 7d36ca133e26d124cae9e5e916c69ba1, type: 3}
   startGame: 0
 --- !u!65 &1045923495
 BoxCollider:
