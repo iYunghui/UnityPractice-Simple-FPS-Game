@@ -26,6 +26,9 @@ public class MainCube : MonoBehaviour
             mainCube.Translate(-2*Time.deltaTime, 0, 0);
         }
 
+        if(mainCube.position.x > 4.5) mainCube.position = new Vector3(4.5f, mainCube.position.y , mainCube.position.z);
+        else if(mainCube.position.x < -4.5) mainCube.position = new Vector3(-4.5f, mainCube.position.y , mainCube.position.z);
+
         if(Input.GetKeyDown(KeyCode.Space)) {
             // bullet
             Instantiate(bullet, mainCube.position, Quaternion.identity);
